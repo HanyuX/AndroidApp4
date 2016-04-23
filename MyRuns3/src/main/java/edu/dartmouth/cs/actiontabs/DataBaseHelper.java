@@ -50,16 +50,16 @@ public class DataBaseHelper extends SQLiteOpenHelper{
         try {
             SQLiteDatabase db = this.getWritableDatabase();
             String sqlAdd = "insert into " + TABLE_NAME + " (ID, Date, Time, Duration, Distance, Calories, " +
-                    "HeartRate, Comment, InputType, ActivityType) values ('" + (item.ID.equals("") ? "-1" : item.ID) +"','"+
-                    (item.Date.equals("") ? "0" : item.Date) +"','"+
-                    (item.Time.equals("") ? "0" : item.Time) +"',"+
-                    (item.Duration < 0 ? 0 : item.Duration)  +","+
-                    (item.Distance < 0 ? 0 : item.Distance)  +","+
-                    (item.Calories < 0 ? 0 : item.Calories)  +","+
-                    (item.HeartRate < 0 ? 0 : item.HeartRate)+",'"+
-                    (item.Comment.equals("") ? "0" : item.Comment) + "','" +
-                    (item.InputType.equals("") ? "0" : item.InputType) +"','"+
-                    (item.ActivityType.equals("") ? "0" : item.ActivityType) +"')";
+                    "HeartRate, Comment, InputType, ActivityType) values ('" + (item.getID().equals("") ? "-1" : item.getID()) +"','"+
+                    (item.getDate().equals("") ? "0" : item.getDate()) +"','"+
+                    (item.getTime().equals("") ? "0" : item.getTime()) +"',"+
+                    (item.getDuration() < 0 ? 0 : item.getDuration())  +","+
+                    (item.getDistance() < 0 ? 0 : item.getDistance())  +","+
+                    (item.getCalories() < 0 ? 0 : item.getCalories())  +","+
+                    (item.getHeartRate() < 0 ? 0 : item.getHeartRate())+",'"+
+                    (item.getComment().equals("") ? "0" : item.getComment()) + "','" +
+                    (item.getInputType().equals("") ? "0" : item.getInputType()) +"','"+
+                    (item.getActivityType().equals("") ? "0" : item.getActivityType()) +"')";
             db.execSQL(sqlAdd);
         }catch (Exception exc){
             Log.d("addItem", exc.getMessage());
