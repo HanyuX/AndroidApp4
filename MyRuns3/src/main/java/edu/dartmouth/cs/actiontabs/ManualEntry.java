@@ -180,23 +180,23 @@ public class ManualEntry extends ListActivity{
             else
                 editText.setInputType(InputType.TYPE_CLASS_NUMBER);
 
-            //show the result in the dialog
-            switch (title){
-                case "Duration":
-                    editText.setText(item.Duration < 0 ? "" : item.Duration+"");
-                    break;
-                case "Distance":
-                    editText.setText(item.Distance < 0 ? "" : item.Distance+"");
-                    break;
-                case "Calories":
-                    editText.setText(item.Calories < 0 ? "" : item.Calories+"");
-                    break;
-                case "Heart Rate":
-                    editText.setText(item.HeartRate < 0 ? "" : item.HeartRate+"");
-                    break;
-                case "Comment":
-                    editText.setText(item.Comment+"");
-            }
+//            //show the result in the dialog
+//            switch (title){
+//                case "Duration":
+//                    editText.setText(item.Duration < 0 ? "" : item.Duration+"");
+//                    break;
+//                case "Distance":
+//                    editText.setText(item.Distance < 0 ? "" : item.Distance+"");
+//                    break;
+//                case "Calories":
+//                    editText.setText(item.Calories < 0 ? "" : item.Calories+"");
+//                    break;
+//                case "Heart Rate":
+//                    editText.setText(item.HeartRate < 0 ? "" : item.HeartRate+"");
+//                    break;
+//                case "Comment":
+//                    editText.setText(item.Comment+"");
+//            }
 
             return new AlertDialog.Builder(getActivity())
                     .setTitle(title)

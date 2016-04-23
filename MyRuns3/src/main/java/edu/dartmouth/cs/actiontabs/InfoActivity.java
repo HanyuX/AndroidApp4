@@ -87,7 +87,6 @@ public class InfoActivity extends Activity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_delete:
-//                new asyncTask(id).execute();
                 myThread thread = new myThread(id);
                 thread.start();
                 finish();
@@ -110,24 +109,4 @@ public class InfoActivity extends Activity{
             helper.deleteItem(ID);
         }
     }
-//    class asyncTask extends AsyncTask<Void, Void, Void> {
-//        private String ID;
-//
-//        public asyncTask(String ID){
-//            this.ID = ID;
-//        }
-//        @Override
-//        protected Void doInBackground(Void... params) {
-//            helper.deleteItem(ID);
-//            return null;
-//        }
-//
-//        @Override
-//        protected void onPreExecute() {
-//        }
-//
-//        @Override
-//        protected void onPostExecute(Void result) {
-//        }
-//    }
 }
